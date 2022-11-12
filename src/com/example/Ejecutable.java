@@ -9,7 +9,7 @@ import com.example.gui.JDCalificar;
 import com.example.gui.JDLoginUsuario;
 
 /**
- *
+ * 
  * @author Emanuel
  */
 public class Ejecutable {
