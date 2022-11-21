@@ -20,25 +20,20 @@ public class ConexionDaoMySql {
 
     private static Connection conn = null;
 
-    //private static String driver = "com.mysql.jdbc.Driver";
-    private static String url = "jdbc:mysql://localhost:3333/appstoredb?serverTimezone=UTC";
-    private static String usuario = "111mil";
-    private static String password = "111mil";
+    private static String url = "jdbc:mysql://localhost:3306/appstoredb?";
+    private static String usuario = "root";
+    private static String password = "";
 
     public ConexionDaoMySql() {
     }
 
     public static Connection getConexion() throws DaoException {
         try {
-            //Class.forName(driver); // dice que no es necesario
             conn = DriverManager.getConnection(url, usuario, password);
         } catch (SQLException ex) {
             Logger.getLogger(ConexionDaoMySql.class.getName()).log(Level.SEVERE, null, ex);
             throw new DaoException("Error al tratar de conectarse a MySql", ex);
-        } /*catch (ClassNotFoundException ex) {
-            Logger.getLogger(ConexionDaoMySql.class.getName()).log(Level.SEVERE, null, ex);
-            throw new DaoException("Error en el driver al tratar de conectarse a MySql", ex);
-        }*/
+        }
         return conn;
     }
 }

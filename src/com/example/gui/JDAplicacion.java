@@ -195,6 +195,12 @@ public class JDAplicacion extends javax.swing.JDialog {
                     "Aplicaciones", JOptionPane.ERROR_MESSAGE);
             band = false;
         }
+        if (JTADescripApp.getText().length()>250) {
+            JOptionPane.showMessageDialog(this,
+                    "Descripción demasiado extensa",
+                    "Aplicaciones", JOptionPane.ERROR_MESSAGE);
+            band = false;
+        }
 
         // verifica si ha seleccionado una imagen para la aplicación.
         if (fileNvaImgApp == null && band == true) { // <--- No hay nueva imagen

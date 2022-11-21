@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 /**
  *
  * @author Emanuel
@@ -25,14 +26,13 @@ public class ConexionDaoMySqlSingleton {
     // recursos la conexión ya se cerro y da error.
     
     private ConexionDaoMySqlSingleton() throws DaoException {
-        String url = "jdbc:mysql://localhost:3333/appstoredb?serverTimezone=UTC";
-        String usuario = "111mil";
-        String password = "111mil";
-
+        String url = "jdbc:mysql://localhost:3306/appstoredb? [root on Default schema]";
+        String usuario = "root";
+        String password = "";
         try {
             conn = DriverManager.getConnection(url, usuario, password);
         } catch (SQLException e) {
-            throw new DaoException("Error al tratar de conectarse a MySql", e);
+            throw new DaoException("Error al tratar de conectarse a MySql DaoSingleton", e);
         }
     } 
 

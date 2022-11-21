@@ -41,6 +41,7 @@ public class JFPrincipal extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setTitle("App Store");
         this.setVisible(true);
+        this.setExtendedState(MAXIMIZED_BOTH);
         this.lstApp = gestorApp.leerTodasAplicaciones();
         mostrarAplicaciones("");
         usuarioActual();
